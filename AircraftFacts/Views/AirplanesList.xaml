@@ -26,16 +26,55 @@
             SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10,5">
-                        <Frame HeightRequest="125" Style="{StaticResource CardView}">
-                            <Grid Padding="0" ColumnDefinitions="125,*">
-                                <Image Aspect="AspectFill" Source="{Binding Image}" />
+                    <Grid Padding="5,5">
+                        <Frame
+                            Padding="10"
+                            HeightRequest="100"
+                            Style="{StaticResource CardView}">
+                            <Grid
+                                Padding="0"
+                                ColumnDefinitions="125,*"
+                                RowDefinitions="*"
+                                VerticalOptions="FillAndExpand">
+                                <Image
+                                    Grid.Column="0"
+                                    Margin="0,20,0,0"
+                                    Aspect="AspectFill"
+                                    HorizontalOptions="Center"
+                                    MaximumWidthRequest="100"
+                                    Source="{Binding Image}"
+                                    VerticalOptions="Center" />
                                 <StackLayout
                                     Grid.Column="1"
-                                    Padding="10"
                                     VerticalOptions="Center">
-                                    <Label FontSize="Large" Text="{Binding Name}" />
-                                    <Label FontSize="Medium" Text="{Binding Manufacturer}" />
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="OpenSansRegular"
+                                        FontSize="Large"
+                                        Text="{Binding Name}"
+                                        TextColor="DarkBlue" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            FontSize="Small"
+                                            Text="Built By:  "
+                                            TextColor="Black"
+                                            VerticalTextAlignment="Center" />
+                                        <Label
+                                            FontSize="Medium"
+                                            Text="{Binding Manufacturer}"
+                                            TextColor="DarkBlue" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            FontSize="Small"
+                                            Text="Max Passenger:  "
+                                            TextColor="Black"
+                                            VerticalTextAlignment="Center" />
+                                        <Label
+                                            FontSize="Medium"
+                                            Text="{Binding MaxPassengers}"
+                                            TextColor="DarkBlue" />
+                                    </StackLayout>
                                 </StackLayout>
                             </Grid>
                         </Frame>
@@ -48,7 +87,9 @@
         <Button
             Grid.Row="1"
             Grid.Column="0"
+            Grid.ColumnSpan="2"
             Margin="8"
+            BackgroundColor="MediumPurple"
             Command="{Binding GetAirplanesCommand}"
             IsEnabled="{Binding IsNotBusy}"
             Text="Update Airplanes" />
