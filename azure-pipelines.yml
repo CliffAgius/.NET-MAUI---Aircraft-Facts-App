@@ -1,12 +1,15 @@
 pool:
-  name: Azure Pipelines
-  demands: xcode
+  vmImage: 'macOS-10.15'
 
 steps:
-- script: |
-    curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 6.0.x
-    dotnet --info
-  displayName: 'Command Line Install .NET'
+- task: UseDotNet@2
+  displayName: 'Use .NET sdk'
+  inputs:
+    packageType: sdk
+    version: 6.0.x
+    installationPath: $(Agent.ToolsDirectory)/dotnet
 
-- script: 'dotnet workload install maui'
-  displayName: 'Command Line - Install MAUI workload'
+- task: CmdLine@2
+  inputs:
+    script: 'dotnet workload install maui'
+
