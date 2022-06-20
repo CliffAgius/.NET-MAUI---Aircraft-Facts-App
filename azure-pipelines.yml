@@ -4,13 +4,45 @@ pool:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Use .NET sdk'
+  displayName: 'Install .NET sdk'
   inputs:
     packageType: sdk
     version: 6.0.x
     installationPath: $(Agent.ToolsDirectory)/dotnet
 
 - task: CmdLine@2
+  displayName: 'Install Maui Workload'
   inputs:
     script: 'dotnet workload install maui'
 
+- task: InstallAppleCertificate@2
+  displayName: 'Install an Apple certificate'
+  inputs:
+    certSecureFile: '56f42eaf-4ba3-433c-b4e1-d6cc623bfe31'
+    certPwd: '$(CertP12)'
+    setUpPartitionIdACLForPrivateKey: false 
+
+- task: InstallAppleProvisioningProfile@1
+  displayName: 'Install an Apple provisioning profile'
+  inputs:
+    provProfileSecureFile: 'b966feeb-a742-4db8-97ab-f751554ca971'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish'
+  inputs:
+    command: publish
+    publishWebProjects: false
+    projects: '**/*.sln'
+    arguments: '-f:net6.0-ios -c:Release /p:ArchiveOnBuild=true /p:EnableAssemblyILStripping=false'
+    zipAfterPublish: false
+    modifyOutputPath: false
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+  inputs:
+    SourceFolder: '$(Agent.BuildDirectory)'
+    Contents: '**/*'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
