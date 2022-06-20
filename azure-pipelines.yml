@@ -1,5 +1,6 @@
 pool:
-  vmImage: 'macOS-10.15'
+  vmImage: 'macos-latest'
+  demands: xcode
 
 steps:
 - task: UseDotNet@2
