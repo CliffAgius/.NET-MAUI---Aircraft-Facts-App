@@ -1,19 +1,19 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
-
 pool:
-  vmImage: ubuntu-latest
+  name: Azure Pipelines
+  demands: xcode
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk 6.0.x'
+  inputs:
+    version: '6.0.300-preview.22204.3'
+    includePreviewVersions: true
+  enabled: false
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 6.0.x
+    dotnet --info
+  displayName: 'Command Line Install .NET'
+
+- script: 'dotnet workload install maui'
+  displayName: 'Command Line - Install MAUI workload'
