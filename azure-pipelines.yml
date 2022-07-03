@@ -15,4 +15,9 @@ steps:
   inputs:
     script: 'dotnet workload install maui'
 
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'CAS-Dev.p12'
+    certPwd: 'p12_password'
+    keychain: 'temp'
 
