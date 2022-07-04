@@ -43,29 +43,21 @@
                                     Grid.Column="0"
                                     Source="{Binding Image}"
                                     Style="{StaticResource AircraftImage}" />
-                                <StackLayout
-                                    Grid.Column="1"
-                                    VerticalOptions="Center">
-                                    <Label
-                                        Style="{StaticResource TitleLabel}"
-                                        Text="{Binding Name}" />
+                                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <Label Style="{StaticResource TitleLabel}" Text="{Binding Name}" />
                                     <StackLayout Orientation="Horizontal">
                                         <Label
                                             Style="{StaticResource DataLabel}"
                                             Text="Built By:  "
                                             TextColor="{StaticResource LabelBlack}" />
-                                        <Label
-                                            Style="{StaticResource DataLabel}"
-                                            Text="{Binding Manufacturer}" />
+                                        <Label Style="{StaticResource DataLabel}" Text="{Binding Manufacturer}" />
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
                                         <Label
                                             Style="{StaticResource DataLabel}"
                                             Text="Max Passenger:  "
                                             TextColor="{StaticResource LabelBlack}" />
-                                        <Label
-                                            Style="{StaticResource DataLabel}"
-                                            Text="{Binding MaxPassengers}" />
+                                        <Label Style="{StaticResource DataLabel}" Text="{Binding MaxPassengers}" />
                                     </StackLayout>
                                 </StackLayout>
                             </Grid>

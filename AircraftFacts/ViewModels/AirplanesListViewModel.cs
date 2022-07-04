@@ -1,38 +1,27 @@
 ﻿using AircraftFacts.Models;
 using AircraftFacts.Views;
-using CommunityToolkit.Mvvm.ComponentModel;
-//using MvvmHelpers;
-//using MvvmHelpers.Commands;
-//using MvvmHelpers.Interfaces;
+using MvvmHelpers;
+using MvvmHelpers.Commands;
+using MvvmHelpers.Interfaces;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
 namespace AircraftFacts.ViewModels
 {
-    internal class AirplanesListViewModel : ObservableObject
+    public class AirplanesListViewModel : BaseViewModel
     {
-        [ObservableProperty]
-        public string FirstName;
-        public string LastName { get; set; }
-
-
-
-        public ObservableCollection<Airplane> Airplanes { get; set; } = new ObservableCollection<Airplane>();
+        public IAsyncCommand<Airplane> SelectAirplaneCommand { get; set; }
         public IAsyncCommand GetAirplanesCommand { get; set; }
 
-        public IAsyncCommand<Airplane> SelectAirplaneCommand { get; set; }
+        public ObservableCollection<Airplane> Airplanes { get; set; } = new ObservableCollection<Airplane>();
 
         public AirplanesListViewModel()
         {
-            // Set the Page Title...
-            first
             Title = "Airplanes";
-            // Initialise the command to call the Async Method...
-            GetAirplanesCommand = new AsyncCommand(GetAirplanesAsync);
             SelectAirplaneCommand = new AsyncCommand<Airplane>(ActionSelection);
+            GetAirplanesCommand = new AsyncCommand(GetAirplanesAsync);
         }
-
 
         private async Task ActionSelection(Airplane selection)
         {

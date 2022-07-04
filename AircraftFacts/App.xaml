@@ -25,9 +25,7 @@
                 <Setter Property="Padding" Value="14,10" />
             </Style>
 
-            <Style
-                x:Key="AircraftImage"
-                TargetType="Image">
+            <Style x:Key="AircraftImage" TargetType="Image">
                 <Setter Property="Margin" Value="0,20,0,0" />
                 <Setter Property="Aspect" Value="AspectFill" />
                 <Setter Property="HorizontalOptions" Value="Center" />
@@ -35,27 +33,21 @@
                 <Setter Property="MaximumWidthRequest" Value="100" />
             </Style>
 
-            <Style
-                x:Key="TitleLabel"
-                TargetType="Label">
+            <Style x:Key="TitleLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource LabelBlue}" />
                 <Setter Property="FontFamily" Value="Nunito" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="FontSize" Value="Large" />
             </Style>
 
-            <Style
-                x:Key="DataLabel"
-                TargetType="Label">
+            <Style x:Key="DataLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource LabelBlue}" />
                 <Setter Property="FontFamily" Value="Nunito" />
                 <Setter Property="FontSize" Value="Medium" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
             </Style>
 
-            <Style
-                x:Key="UpdateButton"
-                TargetType="Button">
+            <Style x:Key="UpdateButton" TargetType="Button">
                 <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
