@@ -14,7 +14,7 @@
 		<ApplicationTitle>AircraftFacts</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.aircraftfacts</ApplicationId>
+		<ApplicationId>com.CASoftware.aircraftfacts</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationVersion>1</ApplicationVersion>
