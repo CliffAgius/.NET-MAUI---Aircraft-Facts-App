@@ -67,20 +67,19 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<!--<ItemGroup>
-	  <MauiXaml Update="AppShell.xaml">
-	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-	  </MauiXaml>
-	</ItemGroup>-->
-
+	<!-- Build Targets -->
+	
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<OutputType>WinExe</OutputType>
 		<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
-	  <CodesignKey>Apple Development: Clifford Agius %28SJ79W2VUCW%29</CodesignKey>
-	  <CodesignProvision>VS: WildCard Development</CodesignProvision>
-	</PropertyGroup>
+	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'" />
+		
+	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
+		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+		<!-- Only needed when you need entitlements-->
+		<!--<CodesignEntitlement>Entitlements.plist</CodesignEntitlement>-->
+	</PropertyGroup>	
 	
 </Project>
