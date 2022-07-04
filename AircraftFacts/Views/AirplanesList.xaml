@@ -21,8 +21,11 @@
         RowSpacing="0">
         <!--  This is the main control that will display the Data...  -->
         <CollectionView
+            x:Name="AirplaneCollectionView"
             Grid.ColumnSpan="2"
             ItemsSource="{Binding Airplanes}"
+            SelectionChangedCommand="{Binding SelectAirplaneCommand}"
+            SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference AirplaneCollectionView}}"
             SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -38,42 +41,31 @@
                                 VerticalOptions="FillAndExpand">
                                 <Image
                                     Grid.Column="0"
-                                    Margin="0,20,0,0"
-                                    Aspect="AspectFill"
-                                    HorizontalOptions="Center"
-                                    MaximumWidthRequest="100"
                                     Source="{Binding Image}"
-                                    VerticalOptions="Center" />
+                                    Style="{StaticResource AircraftImage}" />
                                 <StackLayout
                                     Grid.Column="1"
                                     VerticalOptions="Center">
                                     <Label
-                                        FontAttributes="Bold"
-                                        FontFamily="OpenSansRegular"
-                                        FontSize="Large"
-                                        Text="{Binding Name}"
-                                        TextColor="DarkBlue" />
+                                        Style="{StaticResource TitleLabel}"
+                                        Text="{Binding Name}" />
                                     <StackLayout Orientation="Horizontal">
                                         <Label
-                                            FontSize="Small"
+                                            Style="{StaticResource DataLabel}"
                                             Text="Built By:  "
-                                            TextColor="Black"
-                                            VerticalTextAlignment="Center" />
+                                            TextColor="{StaticResource LabelBlack}" />
                                         <Label
-                                            FontSize="Medium"
-                                            Text="{Binding Manufacturer}"
-                                            TextColor="DarkBlue" />
+                                            Style="{StaticResource DataLabel}"
+                                            Text="{Binding Manufacturer}" />
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
                                         <Label
-                                            FontSize="Small"
+                                            Style="{StaticResource DataLabel}"
                                             Text="Max Passenger:  "
-                                            TextColor="Black"
-                                            VerticalTextAlignment="Center" />
+                                            TextColor="{StaticResource LabelBlack}" />
                                         <Label
-                                            FontSize="Medium"
-                                            Text="{Binding MaxPassengers}"
-                                            TextColor="DarkBlue" />
+                                            Style="{StaticResource DataLabel}"
+                                            Text="{Binding MaxPassengers}" />
                                     </StackLayout>
                                 </StackLayout>
                             </Grid>
@@ -87,11 +79,9 @@
         <Button
             Grid.Row="1"
             Grid.Column="0"
-            Grid.ColumnSpan="2"
-            Margin="8"
-            BackgroundColor="MediumPurple"
             Command="{Binding GetAirplanesCommand}"
             IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource UpdateButton}"
             Text="Update Airplanes" />
 
         <!--  This Activity indicator will show center of the screen while the IsBusy flag is set...  -->

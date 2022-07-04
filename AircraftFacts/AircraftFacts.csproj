@@ -43,23 +43,34 @@
 		<MauiFont Include="Resources\Fonts\*" />
 	</ItemGroup>
 
-	<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
-		<!-- Required - WinUI does not yet have buildTransitive for everything -->
+	<!--<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
+		--><!-- Required - WinUI does not yet have buildTransitive for everything --><!--
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.30" />
-	</ItemGroup>
+	</ItemGroup>-->
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\airplane.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="1.0.0-pre7" />
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview2" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	  <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\AirplaneDetail.xaml.cs">
+	    <DependentUpon>AirplaneDetail.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="AppShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AirplaneDetail.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\AirplanesList.xaml">

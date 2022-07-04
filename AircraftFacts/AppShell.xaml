@@ -29,10 +29,14 @@
     -->
 
     <TabBar>
-        <Tab Title="Main Page" Icon="dotnet_bot.png">
+        <Tab
+            Title="Main Page"
+            Icon="dotnet_bot.png">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
-        <Tab Title="Airplane List" Icon="airplane.png">
+        <Tab
+            Title="Airplane List"
+            Icon="airplane.png">
             <ShellContent ContentTemplate="{DataTemplate local:AirplanesList}" />
         </Tab>
     </TabBar>

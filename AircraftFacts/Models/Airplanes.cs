@@ -1,8 +1,8 @@
 ﻿namespace AircraftFacts.Models
 {
-
     public class Airplane
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Manufacturer { get; set; }
         public string Model { get; set; }
@@ -13,5 +13,4 @@
         public int MaxTakeOffWeightKg { get; set; }
         public string Image { get; set; }
     }
-
 }
