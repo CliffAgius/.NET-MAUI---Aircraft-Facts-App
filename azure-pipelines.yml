@@ -35,6 +35,8 @@ steps:
     publishWebProjects: false
     projects: '**/*.sln'
     arguments: '-f:net6.0-ios -c:Release /p:ArchiveOnBuild=true /p:EnableAssemblyILStripping=false'
+    zipAfterPublish: false
+    modifyOutputPath: false
 
 - task: CopyFiles@2
   inputs:
