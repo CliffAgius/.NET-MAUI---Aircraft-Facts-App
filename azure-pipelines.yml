@@ -2,9 +2,6 @@ pool:
   vmImage: 'macos-latest'
   demands: xcode
 
-variables:
-- group: ios-variable-group
-
 steps:
 - task: UseDotNet@2
   displayName: 'Install .NET sdk'
@@ -21,6 +18,6 @@ steps:
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'CAS-Dev.p12'
-    certPwd: '$(p12_Password)'
+    certPwd: '$(p12CertPWD)'
     keychain: 'temp'
 
