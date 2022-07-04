@@ -16,8 +16,35 @@ steps:
     script: 'dotnet workload install maui'
 
 - task: InstallAppleCertificate@2
+  displayName: 'Install Apple P12 Cert'
   inputs:
     certSecureFile: 'CAS-Dev.p12'
     certPwd: '$(p12CertPWD)'
     keychain: 'temp'
 
+- task: InstallAppleProvisioningProfile@1
+  displayName: 'Install Apple Provisioning Profile'
+  inputs:
+    provisioningProfileLocation: 'secureFiles'
+    provProfileSecureFile: 'AirplaneFinderDemoDev.mobileprovision'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Build and Publish iOS'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: '**/*.sln'
+    arguments: '-f:net6.0-ios -c:Release /p:ArchiveOnBuild=true /p:EnableAssemblyILStripping=false'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Agent.BuildDirectory)'
+    Contents: '**/*'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    OverWrite: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
