@@ -26,7 +26,7 @@ steps:
   displayName: 'Install Apple Provisioning Profile'
   inputs:
     provisioningProfileLocation: 'secureFiles'
-    provProfileSecureFile: 'AirplaneFinderDemoDev.mobileprovision'
+    provProfileSecureFile: 'AircraftFactsDev.mobileprovision'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build and Publish iOS'
