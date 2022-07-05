@@ -78,7 +78,7 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<!-- Build Targets --><!--
+	 <!--Build Targets--> 
 	
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<OutputType>WinExe</OutputType>
@@ -89,8 +89,8 @@
 		
 	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
 		<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
-		--><!-- Only needed when you need entitlements--><!--
-		--><!--<CodesignEntitlement>Entitlements.plist</CodesignEntitlement>--><!--
-	</PropertyGroup>-->	
+		 <!--Only needed when you need entitlements-->
+		<CodesignEntitlement>Entitlements.plist</CodesignEntitlement>
+	</PropertyGroup>	
 	
 </Project>
