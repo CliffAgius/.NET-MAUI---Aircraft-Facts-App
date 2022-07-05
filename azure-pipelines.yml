@@ -29,23 +29,25 @@ steps:
     provProfileSecureFile: 'AircraftFactsDev.mobileprovision'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Build and Publish iOS'
+  displayName: 'Build the iOS Binaries'
   inputs:
     command: 'publish'
     publishWebProjects: false
     projects: '**/*.sln'
     arguments: '-f:net6.0-ios -c:Release /p:ArchiveOnBuild=true /p:EnableAssemblyILStripping=false'
     zipAfterPublish: false
-    modifyOutputPath: false
 
 - task: CopyFiles@2
+  displayName: 'Copy file from Build to Staging'
   inputs:
     SourceFolder: '$(Agent.BuildDirectory)'
     Contents: '**/*'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    CleanTargetFolder: true
     OverWrite: true
 
 - task: PublishBuildArtifacts@1
+  displayName: 'Publish the Staging Files.'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
