@@ -7,13 +7,17 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'macos-latest'
+  demands: xcode
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: UseDotNet@2
+  displayName: 'Install DotNet'
+  inputs:
+    packageType: 'sdk'
+    version: '6.0.x'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: CmdLine@2
+  inputs:
+    script: 'dotnet workload install maui'
+
+
