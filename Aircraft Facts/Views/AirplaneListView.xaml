@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Aircraft_Facts.Views.AirplaneListView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:Aircraft_Facts.ViewModels"
+    Title="{Binding Title}"
+    BackgroundColor="White"
+    Shell.TitleColor="{StaticResource Primary}">
+    <!--  Add a Binding Context to our ViewModel  -->
+    <ContentPage.BindingContext>
+        <vm:AirplanesListViewModel />
+    </ContentPage.BindingContext>
+
+    <!--  Grid that will layout the page..  -->
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="5"
+        RowDefinitions="*,Auto"
+        RowSpacing="0">
+        <!--  This is the main control that will display the Data...  -->
+        <CollectionView
+            x:Name="AirplaneCollectionView"
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding Airplanes}"
+            SelectionChangedCommand="{Binding SelectAirplaneCommand}"
+            SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference AirplaneCollectionView}}"
+            SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5,5">
+                        <Frame
+                            Padding="5"
+                            HeightRequest="150"
+                            Style="{StaticResource CardView}">
+                            <Grid
+                                ColumnDefinitions="125,*"
+                                RowDefinitions="*"
+                                VerticalOptions="FillAndExpand">
+                                <Image
+                                    Grid.Column="0"
+                                    Source="{Binding Image}"
+                                    Style="{StaticResource AircraftImage}" />
+                                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <Label Style="{StaticResource TitleLabel}" Text="{Binding Name}" />
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Style="{StaticResource DataLabel}"
+                                            Text="Built By:  "
+                                            TextColor="{StaticResource LabelBlack}" />
+                                        <Label Style="{StaticResource DataLabel}" Text="{Binding Manufacturer}" />
+                                    </HorizontalStackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label
+                                            Style="{StaticResource DataLabel}"
+                                            Text="Max Passenger:  "
+                                            TextColor="{StaticResource LabelBlack}" />
+                                        <Label Style="{StaticResource DataLabel}" Text="{Binding MaxPassengers}" />
+                                    </StackLayout>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!--  Button that binds to the Command to Get the List of Airplanes...  -->
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Command="{Binding GetAirplanesCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource UpdateButton}"
+            Text="Update Airplanes" />
+
+        <!--  This Activity indicator will show center of the screen while the IsBusy flag is set...  -->
+        <ActivityIndicator
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="FillAndExpand"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="CenterAndExpand" />
+    </Grid>
+</ContentPage>

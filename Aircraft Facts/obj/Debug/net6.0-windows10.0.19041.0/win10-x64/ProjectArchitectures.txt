@@ -1,0 +1,1 @@
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\Aircraft Facts.csproj;x64

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Aircraft_Facts.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Aircraft_Facts"
+    xmlns:views="clr-namespace:Aircraft_Facts.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Main Page">
+            <Tab.Icon>
+                <FontImageSource FontFamily="MaterialDesignIcons" Glyph="&#xF02DC;" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="Airplane List">
+            <Tab.Icon>
+                <FontImageSource FontFamily="MaterialDesignIcons" Glyph="&#xF001D;" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate views:AirplaneListView}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

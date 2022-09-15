@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Aircraft_Facts.Views.AirplaneDetailView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:Aircraft_Facts.ViewModels"
+    Title="{Binding Title}"
+    BackgroundColor="White"
+    Shell.TitleColor="{StaticResource Primary}">
+
+    <!--  Add a Binding Context to our ViewModel  -->
+    <ContentPage.BindingContext>
+        <vm:AircraftDetailViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Frame Padding="5" Style="{StaticResource CardView}">
+            <VerticalStackLayout Padding="10">
+                <Image Source="{Binding Airplane.Image}" Style="{StaticResource AircraftImage}" />
+                <Label Style="{StaticResource TitleLabel}" Text="{Binding Airplane.Name}" />
+                <HorizontalStackLayout>
+                    <Label
+                        Style="{StaticResource DataLabel}"
+                        Text="Built By:  "
+                        TextColor="{StaticResource LabelBlack}" />
+                    <Label Style="{StaticResource ValueLabel}" Text="{Binding Airplane.Manufacturer}" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Style="{StaticResource DataLabel}"
+                        Text="Model:  "
+                        TextColor="{StaticResource LabelBlack}" />
+                    <Label Style="{StaticResource ValueLabel}" Text="{Binding Airplane.Model}" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Style="{StaticResource DataLabel}"
+                        Text="Max Passenger:  "
+                        TextColor="{StaticResource LabelBlack}" />
+                    <Label Style="{StaticResource ValueLabel}" Text="{Binding Airplane.MaxPassengers}" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Style="{StaticResource DataLabel}"
+                        Text="Max Take-Off Weight (Kg):  "
+                        TextColor="{StaticResource LabelBlack}" />
+                    <Label Style="{StaticResource ValueLabel}" Text="{Binding Airplane.MaxTakeOffWeightKg}" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Style="{StaticResource DataLabel}"
+                        Text="Cruise Speed (Mach):  "
+                        TextColor="{StaticResource LabelBlack}" />
+                    <Label Style="{StaticResource ValueLabel}" Text="{Binding Airplane.CruiseSpeedMach}" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Style="{StaticResource DataLabel}"
+                        Text="Range (NM):  "
+                        TextColor="{StaticResource LabelBlack}" />
+                    <Label Style="{StaticResource ValueLabel}" Text="{Binding Airplane.RangeNM}" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

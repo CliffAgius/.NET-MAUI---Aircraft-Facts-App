@@ -1,0 +1,44 @@
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\mauiimage.inputs
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\mauifont.inputs
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\mauisplash.inputs
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\sp\MauiSplash.storyboard
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\mauisplash.stamp
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@2x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon20x20@3x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@2x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon29x29@3x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon40x40@2x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon40x40@3x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon60x60@2x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon60x60@3x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon76x76@2x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appicon83.5x83.5@2x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\appiconItunesArtwork.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@2x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\dotnet_bot@3x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\splash.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\splash@2x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\r\splash@3x.png
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\mauiimage.stamp
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\f\MauiInfo.plist
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\mauifont.stamp
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\f\materialdesignicons-webfont.ttf
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Regular.ttf
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Semibold.ttf
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\actool\_PartialAppManifest.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\actool\_BundleResourceWithLogicalName.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\actool\_ProcessedImageAssetsPath.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\ibtool\_BundleResourceWithLogicalName.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\ibtool\_ProcessedInterfaceDefinitionsPath.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\coremlc\_PartialAppManifest.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\coremlc\_BundleResourceWithLogicalName.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\coremlc\_ProcessedCoreMLModelsPath.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\_ProcessedBundleResourcesPath.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\_ProcessedContentPath.items
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\Aircraft Facts.csproj.AssemblyReference.cache
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\Aircraft Facts.GeneratedMSBuildEditorConfig.editorconfig
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\Aircraft Facts.AssemblyInfoInputs.cache
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\Aircraft Facts.AssemblyInfo.cs
+C:\CA-Software\OSS\Aircraft Facts\Aircraft Facts\obj\Debug\net6.0-ios\iossimulator-x64\Aircraft Facts.csproj.CoreCompileInputs.cache
